@@ -8,6 +8,9 @@
       <div class="prev">
         <img  @click="selectWH(prev)" :src="getImgUrl(prev.img)" alt="kitten" class="img" :class="{'fade-out': !transObject.prvTrans}">
       </div>
+      <div class="top">
+        <img  @click="selectWH(top)" :src="getImgUrl(top.img)" alt="kitten" class="img" :class="{'fade-out': !transObject.topTrans}">
+      </div>
       <div class="selected">
         <img  @click="selectWH(current)" :src="getImgUrl(current.img)" alt="kitten" class="img" :class="{'fade-out': !transObject.crnTrans}">
         </div>
@@ -30,6 +33,7 @@
 </template>
 <script>
 
+import { thinkPeaks } from 'fontawesome';
 import { sidebarWidth } from '../../Navigation/Sidebar/state'
 export default {
 
@@ -52,6 +56,12 @@ export default {
         img: 'Grid',
         title: 'Angular Developer',
         message: 'Mr. Truban helped maintain the operation of a large-scale portal middleware application critical for clients’ operations. His tasks included adjusting the application to allow new applications connection to the clients database and other applications and improving the security and runtime of various features the portal utilized through leveraging the Angular framework, and Oracle SQL queries.'
+      },
+      Wegmans: {
+        name: 'Wegmans',
+        img: 'wegmans',
+        title: 'Prepared Foods Staff',
+        message: "Before transitioning to a career as a software engineer, I spent ten years at Wegmans, where I advanced into a management role. In addition to managing people and refining soft skills, my responsibilities included writing schedules, handling orders, and setting the workflow for a department. This multifaceted role allowed me to develop a comprehensive skill set that encompassed effective people management, task delegation, professional customer interactions, and the logistical aspects of scheduling and order inventory. Despite not directly contributing to technical skills, this experience has proven invaluable in my current role as a software engineer."
       }
     };
 
@@ -61,13 +71,15 @@ export default {
     let current = this.workExperience.Nexxis;
     let prev = this.workExperience.GridIron;
     let next = this.workExperience.IBM;
+    let top = this.workExperience.Wegmans;
     let transObject = {
       msgTrans: true,
       prvTrans: true,
       crnTrans: true,
-      nxtTrans: true
+      nxtTrans: true,
+      topTrans: true
     };
-    return { current, prev, next, transObject }
+    return { current, prev, next, top, transObject }
   },
   methods: {
     selectWH(value) {
@@ -77,28 +89,29 @@ export default {
         this.transObject.crnTrans = !this.transObject.crnTrans
         let swap = current;
         if (prev == value) {
-          console.log("prev");
           this.transObject.prvTrans = !this.transObject.prvTrans;
           setTimeout(() => {
             this.prev = swap;
           this.current = value;
-            this.transObject.crnTrans = true;
-            this.transObject.prvTrans = true;
-            this.transObject.nxtTrans = true;
-            this.transObject.msgTrans = true;
+          Object.keys(this.transObject).forEach((k) => this.transObject[k] = true);
           }, 1500);
         }
-        else {
-          console.log("next");
+        else if(next == value) {
           this.transObject.nxtTrans = !this.transObject.nxtTrans
           
           setTimeout(() => {
             this.next = swap;
           this.current = value;
-            this.transObject.crnTrans = true;
-            this.transObject.prvTrans = true;
-            this.transObject.nxtTrans = true;
-            this.transObject.msgTrans = true;
+          Object.keys(this.transObject).forEach((k) => this.transObject[k] = true);
+          }, 1000);
+        }
+        else {
+          this.transObject.topTrans = !this.transObject.topTrans
+          
+          setTimeout(() => {
+            this.top = swap;
+          this.current = value;
+          Object.keys(this.transObject).forEach((k) => this.transObject[k] = true);
           }, 1000);
         }
         
@@ -151,7 +164,7 @@ export default {
 }
 img {
   width: 400px;
-  /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
   border-radius: 10px;
 }
 .img-holder .crnt img {
@@ -165,7 +178,6 @@ img {
   position: relative;
   height: 400px;
   transform: translateY(30%) translateX(8%);
-  overflow: hidden;
 }
 
 #carousel div {
@@ -184,6 +196,11 @@ img {
   left: 30%;
   transform: translateY(50px) translateX(-50%);
 }
+#carousel div.top {
+  z-index: 10;
+  left: 50%;
+  transform: translateY(-150px) translateX(-200px)scale(.75);
+}
 
 #carousel img:hover {
   cursor: pointer;
@@ -197,7 +214,7 @@ img {
 #carousel div.selected {
   z-index: 10;
   left: 50%;
-  transform: translateY(0px) translateX(-50%);
+  transform: translateY(20px) translateX(-50%);
 }
 
  #carousel div.next {
