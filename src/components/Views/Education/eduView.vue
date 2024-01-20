@@ -1,43 +1,65 @@
 <template>
     <div class="eduBody">
-        <div class="header">Education</div>
-        <ul>
-            <li class="eduEntry">
-                Towson University - May, 2021
-                <span>
-                    Computer Science, Bachelor of Science
-                </span>
-                <br/>
-                <span>
-                    With a GPA of 3.6 I graduated with flying colors despite difficulties with the pandemic.
-                </span>
-            </li>
-            <li class="eduEntry">
-                Towson University - May, 2021
-                <span>
-                    Computer Science, Bachelor of Science
-                </span>
-                <br/>
-                <span>
-                    Switching careers I flew through my first few years of school, leaning hard into learning as much as I could for programming. I delved into learning the 
-                    basics of development and while not utilized as much as today, did learn how to use Java Swing for some basic UI design.
-                </span>
-            </li>
-        </ul>
+        <div class="scoolDetails">
+            <v-row cols="12" v-for="school in SCHOOLS" :key="school">
+                <v-col cols="2">
+                    <v-row align="center" justify="center"><img :src=getImgUrl(school.img)></v-row>
+                    <v-row align="center" justify="center">{{ school.name }}</v-row>
+                </v-col>
+                <v-col cols="3" class="degree">
+                    <span class="colHeader">DEGREE:</span> {{ school.degree }}
+                </v-col>
+                <v-col cols="3" class="major">
+                    <span class="colHeader">MAJOR:</span> {{ school.major }}
+                </v-col>
+                <v-col cols="2" class="gpa">
+                    <span class="colHeader">GPA:</span> {{ school.gpa }}
+                </v-col>
+            </v-row>
+
+            <br />
+        </div>
     </div>
 </template>
 <script>
+import { SCHOOLS } from '../../../config/entity'
 export default {
-    
+    data() {
+        return { SCHOOLS }
+    },
+    methods: {
+        getImgUrl(pic) {
+            return require('../../../assets/' + pic + '.png')
+        }
+    }
+
 }
 </script>
 <style scoped>
 .eduBody {
     color: white;
 }
-h1{
-    font-size: 400%;
-    text-decoration-line: underline;
+
+img {
+    max-width: 1000px;
+    max-height: 200px;
+    padding: 30px
 }
 
-</style>
+.schoolHeader {
+    font-size: 250%;
+    font-weight: 300;
+    text-decoration: underline;
+}
+
+.colHeader {
+    font-size: 130%;
+    font-weight: 200;
+    padding-right: 70px;
+}
+
+.gpa,
+.major,
+.degree {
+    padding-top: 15vh;
+}</style>

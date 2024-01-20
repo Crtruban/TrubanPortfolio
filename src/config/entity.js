@@ -71,3 +71,19 @@ export const PROJECTS = {
 },
     ]
 }
+export const SCHOOLS = {
+    TOWSON: {
+        name: 'Towson University',
+        gpa: 3.7,
+        major: 'Computer Science',
+        degree: 'Bachelor of Science',
+        img: 'Towson_University_seal'
+    },
+    CCBC: {
+        name: 'Community College of Baltimore County',
+        gpa: 3.2,
+        major: 'Computer Science',
+        degree: 'Associates of Science',
+        img: 'ccbcTrans'
+    }
+}
