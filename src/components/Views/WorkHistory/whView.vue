@@ -1,5 +1,5 @@
 <template>
-  <div class="whView">
+  <div>
     <div class="header">
       Work History
     </div>
@@ -146,9 +146,6 @@ export default {
 .v-enter-from,
 .v-leave-to {
   opacity: 0;
-}
-.whView{
-  animation: fadeIn 2s;
 }
 @keyframes fadeIn {
   0% { opacity: 0; }

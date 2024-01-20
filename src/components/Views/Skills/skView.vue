@@ -1,5 +1,5 @@
 <template>
-    <div class="pjView">
+    <div >
         <div class="header">
             Skills
         </div>
@@ -57,10 +57,7 @@ export default {
 }
 </script>
 <style scoped>
-.v-enter-active,
-.v-leave-active {
-    transition: opacity 1s ease;
-}
+
 
 .collection{
     transform: scale(1.4);
@@ -70,10 +67,7 @@ export default {
     align-items: flex-start;
 }
 
-.v-enter-from,
-.v-leave-to {
-    opacity: 0;
-}
+
 .skillHeader {
     text-decoration: underline;
     font-size: larger;
@@ -83,7 +77,4 @@ span.skill {
     padding-left: .5%;
 }
 
-.pjView {
-    animation: fadeIn 2s;
-}
 </style>

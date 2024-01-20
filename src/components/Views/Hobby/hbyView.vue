@@ -1,5 +1,5 @@
 <template>
-    <div class="routerView">
+    <div>
       <div class="header">
         Hobbies
       </div>
@@ -22,9 +22,6 @@
   .v-enter-from,
   .v-leave-to {
     opacity: 0;
-  }
-  .routerView{
-    animation: fadeIn 2s;
   }
 
 

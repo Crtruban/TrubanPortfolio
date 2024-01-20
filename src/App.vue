@@ -1,6 +1,10 @@
 <template>
   <Sidebar class="sidebar" />
-  <router-view :class="`routerView ${viewState}`" :style="{ paddingLeft: (sidebarWidth) }" />
+  <router-view :class="`routerView ${viewState}`" :style="{ paddingLeft: (sidebarWidth) }" v-slot="{ Component }">
+    <transition name="page-opacity" mode="out-in">
+      <component :is="Component" />
+    </transition>
+  </router-view>
 </template>
 
 <script>
@@ -26,7 +30,6 @@ export default {
   watch: {
     $route(to, from) {
       document.title = to.name;
-      console.log(document);
       switch (to.name.toString().trim().toLowerCase()) {
         case 'home':
           return this.viewState = 'homeView';
@@ -42,22 +45,38 @@ export default {
 </script>
 
 <style>
-  @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
   }
-  .routerView{
-    animation: fadeIn 2s;
+
+  100% {
+    opacity: 1;
   }
+}
+
+.page-opacity-enter-active,
+.page-opacity-leave-active {
+  transition: 300ms ease all;
+}
+
+.page-opacity-enter-from,
+.page-opacity-leave-to {
+  opacity: 0;
+}
+
+
 .header {
   padding-left: 15%;
   font-size: 550%;
 }
+
 :root {
   --sidebar-bg-color: hsl(0, 94%, 20%);
-  --sidebar-item-hover: hsl(0,94%, 60%);
-  --sidebar-item-active: hsl(0,94%, 40%);
+  --sidebar-item-hover: hsl(0, 94%, 60%);
+  --sidebar-item-active: hsl(0, 94%, 40%);
 }
+
 .Home {
   transform: translateX(1.5%);
 }
