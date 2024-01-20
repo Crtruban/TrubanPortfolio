@@ -32,6 +32,9 @@
                 <span class="skillHeader">Clerance:</span>
                 <span class="skill" v-for="skill in clear" :key="skill" close>
                 <v-chip variant="elevated" color="white">
+                    <v-tooltip activator="parent" location="bottom">
+                        {{ skill.tooltip }}
+                    </v-tooltip>
                     {{ skill.value }}
                 </v-chip>
             </span>
@@ -48,7 +51,7 @@ export default {
         const backEnd = ['Java', 'Spring Boot', 'Postgres', 'C#', ' ASP.NET', 'C++', 'Oracle SQL', 'MariaDB', 'MSQL', ' Docker', ' Microsoft Azure', 'AWS'];
         const tools = ['Android Studio', 'CentOS', 'Linux', 'SVN', 'Git', 'GitLab', 'Microsfot Azure', 'IIS', 'Anaconda', 'CLion', 'Eclipse', 'Visual Studio', 'Windows', 'Jira'];
         const softSkills = ['Strong Communication', 'Time Management', 'Mentoring', 'Leadership', 'Task Delegation', 'Agile'];
-        const clear = [{value: 'Active DoD TS/SCI w/ FS Poly', tooltip: ''}, {value: 'Active DoE Public Trust', tooltip: ''}]
+        const clear = [{value: 'Active DoD TS/SCI w/ FS Poly', tooltip: 'Acquired June 2025'}, {value: 'Active DoE Public Trust', tooltip: 'Acquired August 2022'}]
         return { frontEnd, backEnd, tools, softSkills, clear };
     }
 }
