@@ -41,15 +41,18 @@
           </div>
         </v-col>
         </v-row>
+        <v-row>
           <div class="projectOverview d-flex pb-10">
             <span class="projectInit">Overview: </span>
-          {{ projectExplanation }}
+          <span class="projectDet">{{ projectExplanation }}</span>
         </div>
-        <div class="projectContribution">
-        <span class="projectInit"> Contributions: </span>
-         {{ projectContribution }}
+      </v-row>
+      <v-row>
+        <div class="projectContribution"><v-col col="1">
+        <span class="projectInit"> Contributions: </span></v-col><v-col col="7">
+        <span class="projectDet">{{ projectContribution }}</span></v-col>
         </div>
-      
+      </v-row>
         </div>
       </transition>
       </v-col>
