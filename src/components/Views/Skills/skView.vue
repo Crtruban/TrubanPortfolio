@@ -6,7 +6,7 @@
         <div>
             <div class="collection">
                 <span class="skillHeader">Front End Skills:</span>
-                <span class="skill" v-for="skill in frontEnd" :key="skill" close>
+                <span class="skill" v-for="skill in SKILLS.frontEnd" :key="skill" close>
                 <v-chip variant="elevated" color="white">
                     {{ skill }}
                 </v-chip>
@@ -14,7 +14,7 @@
             </div>
             <div class="collection">
                 <span class="skillHeader">Back End Skills:</span>
-                <span class="skill" v-for="skill in backEnd" :key="skill" close>
+                <span class="skill" v-for="skill in SKILLS.backEnd" :key="skill" close>
                 <v-chip variant="elevated" color="white">
                     {{ skill }}
                 </v-chip>
@@ -22,7 +22,7 @@
             </div>
             <div class="collection">
                 <span class="skillHeader">Soft Skills:</span>
-                <span class="skill" v-for="skill in softSkills" :key="skill" close>
+                <span class="skill" v-for="skill in SKILLS.softSkills" :key="skill" close>
                 <v-chip variant="elevated" color="white">
                     {{ skill }}
                 </v-chip>
@@ -30,7 +30,7 @@
             </div>
             <div class="collection">
                 <span class="skillHeader">Clerance:</span>
-                <span class="skill" v-for="skill in clear" :key="skill" close>
+                <span class="skill" v-for="skill in SKILLS.clear" :key="skill" close>
                 <v-chip variant="elevated" color="white">
                     <v-tooltip activator="parent" location="bottom">
                         {{ skill.tooltip }}
@@ -44,15 +44,11 @@
     </div>
 </template>
 <script>
+import { SKILLS } from '../../../config/entity'
 
 export default {
-    data() {
-        const frontEnd = ['JavaScript', 'React', 'Angular', 'VueJS', 'HTML', 'XML', 'CSS', 'Cypress', 'Jest', 'Selenium'];
-        const backEnd = ['Java', 'Spring Boot', 'Postgres', 'C#', ' ASP.NET', 'C++', 'Oracle SQL', 'MariaDB', 'MSQL', ' Docker', ' Microsoft Azure', 'AWS'];
-        const tools = ['Android Studio', 'CentOS', 'Linux', 'SVN', 'Git', 'GitLab', 'Microsfot Azure', 'IIS', 'Anaconda', 'CLion', 'Eclipse', 'Visual Studio', 'Windows', 'Jira'];
-        const softSkills = ['Strong Communication', 'Time Management', 'Mentoring', 'Leadership', 'Task Delegation', 'Agile'];
-        const clear = [{value: 'Active DoD TS/SCI w/ FS Poly', tooltip: 'Acquired June 2025'}, {value: 'Active DoE Public Trust', tooltip: 'Acquired August 2022'}]
-        return { frontEnd, backEnd, tools, softSkills, clear };
+    setup() {
+        return { SKILLS }
     }
 }
 </script>

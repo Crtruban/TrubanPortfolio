@@ -33,45 +33,20 @@
 </template>
 <script>
 
-import { thinkPeaks } from 'fontawesome';
 import { sidebarWidth } from '../../Navigation/Sidebar/state'
+import { EXPIERENCE } from '../../../config/entity'
 export default {
 
   setup() {
-    const workExperience = {
-      Nexxis: {
-        name: 'Nexxis',
-        img: 'Nexxis',
-        title: 'Full-Stack Software Engineer',
-        message: 'Mr. Truban assisted in the development and maintenance of a large-scale legacy application. Through an agile process Mr. Truban would meet with the client on a bi-weekly basis to determine requirements needed, and then proceed with feature development. '
-      },
-      IBM: {
-        name: 'IBM',
-        img: 'ibm',
-        title:'Federal Technical Associate - Application Developer',
-        message: 'Mr. Truban develops applications for IBM clients by translating system requirements into appropriate designs using Agile methods. He uses VS Code and Eclipse to develop web applications with JavaScript and leverages MVC patterns and ensures the client’s requirements are satisfied.'
-      },
-      GridIron: {
-        name: 'Grid Iron IT',
-        img: 'Grid',
-        title: 'Angular Developer',
-        message: 'Mr. Truban helped maintain the operation of a large-scale portal middleware application critical for clients’ operations. His tasks included adjusting the application to allow new applications connection to the clients database and other applications and improving the security and runtime of various features the portal utilized through leveraging the Angular framework, and Oracle SQL queries.'
-      },
-      Wegmans: {
-        name: 'Wegmans',
-        img: 'wegmans',
-        title: 'Prepared Foods Staff',
-        message: "Before transitioning to a career as a software engineer, I spent ten years at Wegmans, where I advanced into a management role. In addition to managing people and refining soft skills, my responsibilities included writing schedules, handling orders, and setting the workflow for a department. This multifaceted role allowed me to develop a comprehensive skill set that encompassed effective people management, task delegation, professional customer interactions, and the logistical aspects of scheduling and order inventory. Despite not directly contributing to technical skills, this experience has proven invaluable in my current role as a software engineer."
-      }
-    };
+   
 
-    return { sidebarWidth, workExperience };
+    return { sidebarWidth, EXPIERENCE };
   },
   data() {
-    let current = this.workExperience.Nexxis;
-    let prev = this.workExperience.GridIron;
-    let next = this.workExperience.IBM;
-    let top = this.workExperience.Wegmans;
+    let current = EXPIERENCE.Nexxis;
+    let prev = EXPIERENCE.GridIron;
+    let next = EXPIERENCE.IBM;
+    let top = EXPIERENCE.Wegmans;
     let transObject = {
       msgTrans: true,
       prvTrans: true,
