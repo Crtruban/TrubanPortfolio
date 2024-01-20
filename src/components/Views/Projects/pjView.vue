@@ -23,27 +23,35 @@
         </v-expansion-panels>
       </v-col>
       <v-col col="8">
-        <Transition>
-        <div class="projectDialog">
-          
+        <transition  name="page-opacity" mode="out-in">
+        <v-row v-if="!initialLoad && transition">
+            <v-col col="8">
+          <div class="projectInit" >
+          {{ projectExplanation }}
+          </div>
+        </v-col>
+        </v-row>
+      </transition>
+        <transition  name="page-opacity" mode="out-in">
+        <div class="projectDialog" v-if="initialLoad && transition">
           <v-row>
             <v-col col="8">
-          <div class="projectHeader" v-if="initialLoad">
+          <div class="projectHeader" >
           {{ projectTitle }}
           </div>
         </v-col>
         </v-row>
           <div class="projectOverview d-flex pb-10">
-            <span class="projectInit" v-if="initialLoad">Overview: </span>
+            <span class="projectInit">Overview: </span>
           {{ projectExplanation }}
         </div>
-        <div class="projectContribution" v-if="initialLoad">
+        <div class="projectContribution">
         <span class="projectInit"> Contributions: </span>
          {{ projectContribution }}
         </div>
       
         </div>
-      </Transition>
+      </transition>
       </v-col>
     </v-row>
 
@@ -61,14 +69,17 @@ export default {
     let projectTitle = '';
     let projectExplanation = 'Please click one of the projects on the left to display a project.';
     let projectContribution = '';
-    return { projectExplanation,projectContribution, projectTitle, initialLoad }
+    let transition = true;
+    return { projectExplanation,projectContribution, projectTitle, initialLoad, transition }
   },
   methods: {
     setProject(value) {
+      this.transition = false;
       this.initialLoad = true;
       this.projectExplanation = value.explanation;
       this.projectContribution = value.contribution;
       this.projectTitle = value.name;
+      setTimeout(() => this.transition = true, 500);
       
     }
   }
@@ -76,6 +87,11 @@ export default {
 }
 </script>
 <style scoped>
+
+.header {
+  padding-left: 22.5%;
+  font-size: 550%;
+}
 .projectHeader {
   font-size: 300%;
   font-weight: 600;

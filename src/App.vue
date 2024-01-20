@@ -28,7 +28,7 @@ export default {
     return { sidebarWidth };
   },
   watch: {
-    $route(to, from) {
+    $route(to) {
       document.title = to.name;
       switch (to.name.toString().trim().toLowerCase()) {
         case 'home':
