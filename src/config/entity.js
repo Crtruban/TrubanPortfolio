@@ -33,6 +33,11 @@ export const SKILLS = {
     clear: [{ value: 'Active DoD TS/SCI w/ FS Poly', tooltip: 'Acquired June 2025' }, { value: 'Active DoE Public Trust', tooltip: 'Acquired August 2022' }]
 }
 export const PROJECTS = {
+    NEXXIS: [{
+        name: 'REDACTED',
+        explanation: "Due to the level of clearance for this project an overview cannot be provided",
+        contribution: "Mr. Truban helped maintain, and develop new features for the client’s application utilizing a Vue Frontend Framework, and Spring Boot Backend. Through the use of an agile methodology, Mr. Truban would actively complete a variety of requirements determined every other week with the client, and demo said features to ensure the customers satisfaction. Mr. Truban also lead the revitalization of the JEST testing suites to remove substantial technical debt from the application, and rise the code coverage of the applications Front End from 78.2% to 94.6% helping increase the efficiency of other developers’ ability to properly create new features, and catch any potential errors through regression testing. In addition, Mr. Truban provided guidance and assistance in the applications Elastic Search capabilities to help further enhance the applications feature set."
+    }],
     IBM: [{
         name: 'COMPS',
         explanation: "To develop an online management application for the Department of Education to help manage grants issued to various charter schools across the country.The front end was developed using an Angular framework, which was tested using Jasmine. The back end was developed utilizing C#/.Net and connected to an SQL Database.",
