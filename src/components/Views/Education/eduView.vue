@@ -1,6 +1,6 @@
 <template>
     <div class="eduBody">
-        <h1>Education</h1>
+        <div class="header">Education</div>
         <ul>
             <li class="eduEntry">
                 Towson University - May, 2021

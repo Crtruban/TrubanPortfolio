@@ -3,6 +3,7 @@
     <div class="header">
       Work History
     </div>
+    
     <div id="carousel">
       <div class="prev">
         <img  @click="selectWH(prev)" :src="getImgUrl(prev.img)" alt="kitten" class="img" :class="{'fade-out': !transObject.prvTrans}">
@@ -14,16 +15,12 @@
         <img  @click="selectWH(next)" :src="getImgUrl(next.img)" alt="kitten" class="img" :class="{'fade-out': !transObject.nxtTrans}">
       </div>
       </div> 
-      <!-- <div id='item_3' class="prev" @click="selectWH(prev)">
-        <img class="transObject" :src="getImgUrl(prev.img)" :class="{'fade-out': !transObject.prvTrans}">
-      </div>
-      <div id='item_4' class="selected" @click="selectWH(current)">
-        <img :src="getImgUrl(current.img)" :class="{'fade-out': !transObject.crnTrans}">
-      </div>
 
-      <div id='item_5' class="next" :value="next.name" @click="selectWH(next)">
-        <img :src="getImgUrl(next.img)" :class="{'fade-out': !transObject.nxtTrans}">
-      </div> -->
+    <Transition>
+      <div v-if="transObject.msgTrans" class="workTitle">
+      {{ current.title }}
+    </div>
+    </Transition>
     <Transition>
     <div v-if="transObject.msgTrans" class="whMessage">
       {{ current.message }}
@@ -41,16 +38,19 @@ export default {
       Nexxis: {
         name: 'Nexxis',
         img: 'Nexxis',
+        title: 'Full-Stack Software Engineer',
         message: 'Mr. Truban assisted in the development and maintenance of a large-scale legacy application. Through an agile process Mr. Truban would meet with the client on a bi-weekly basis to determine requirements needed, and then proceed with feature development. '
       },
       IBM: {
         name: 'IBM',
         img: 'ibm',
+        title:'Federal Technical Associate - Application Developer',
         message: 'Mr. Truban develops applications for IBM clients by translating system requirements into appropriate designs using Agile methods. He uses VS Code and Eclipse to develop web applications with JavaScript and leverages MVC patterns and ensures the client’s requirements are satisfied.'
       },
       GridIron: {
         name: 'Grid Iron IT',
         img: 'Grid',
+        title: 'Angular Developer',
         message: 'Mr. Truban helped maintain the operation of a large-scale portal middleware application critical for clients’ operations. His tasks included adjusting the application to allow new applications connection to the clients database and other applications and improving the security and runtime of various features the portal utilized through leveraging the Angular framework, and Oracle SQL queries.'
       }
     };
@@ -112,7 +112,13 @@ export default {
 }
 </script>
 <style scoped>
+.workTitle{
+  padding-left: 15%;
+  font-size: 300%;
+
+}
 .img {
+  width: 500px;
   transition: opacity 1s;
 }
 

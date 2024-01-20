@@ -1,6 +1,6 @@
 <template>
   <Sidebar class="sidebar" />
-  <router-view :class="`router ${viewState}`" :style="{ paddingLeft: (sidebarWidth) }" />
+  <router-view :class="`routerView ${viewState}`" :style="{ paddingLeft: (sidebarWidth) }" />
 </template>
 
 <script>
@@ -42,6 +42,17 @@ export default {
 </script>
 
 <style>
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  .routerView{
+    animation: fadeIn 2s;
+  }
+.header {
+  padding-left: 15%;
+  font-size: 550%;
+}
 :root {
   --sidebar-bg-color: hsl(0, 94%, 20%);
 }
