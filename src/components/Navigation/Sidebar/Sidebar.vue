@@ -16,10 +16,10 @@
         <SidebarLink to="/wh" icon="fas fa-handshake" name="Work History"/>
         <SidebarLink to="/edu" icon="fas fa-school" name="Education"/>
         <SidebarLink to="/skl" icon="fas fa-home" name="Skills"/>
-        <SidebarLink to="/hby" icon="fas fa-robot" name="Hobbies"/>
+        <!-- <SidebarLink to="/hby" icon="fas fa-robot" name="Hobbies"/>
         <span class="collapse-icon" @click="toggleSidebar" :class="{ 'rotate-180': collapsed }">
             <font-awesome-icon icon="fas fa-angles-left" />
-        </span>
+        </span> -->
     </div>
 </template>
 <script>
