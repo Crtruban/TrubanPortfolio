@@ -1,5 +1,5 @@
 <template>
-    <router-link class="link" :to="to">
+    <router-link class="link" :to="to" :class="{ active: isActive}">
         <font-awesome-icon :icon="icon" />
         <span class="link-value" v-if="!collapsed">
             {{ name }}

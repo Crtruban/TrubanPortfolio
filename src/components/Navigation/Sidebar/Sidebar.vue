@@ -49,6 +49,13 @@ export default {
     transition: 0.2s linear;
 }
 
+.link:hover {
+    background-color: var(--sidebar-item-hover);
+}
+.link:active {
+    background-color: var(--sidebar-item-active);
+}
+
 .rotate-180 {
     transform: rotate(180deg);
     transition: 0.2s linear;

@@ -55,6 +55,8 @@ export default {
 }
 :root {
   --sidebar-bg-color: hsl(0, 94%, 20%);
+  --sidebar-item-hover: hsl(0,94%, 60%);
+  --sidebar-item-active: hsl(0,94%, 40%);
 }
 .Home {
   transform: translateX(1.5%);
