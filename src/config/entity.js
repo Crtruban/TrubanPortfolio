@@ -3,19 +3,19 @@ export const EXPIERENCE = {
         name: 'Nexxis',
         img: 'Nexxis',
         title: 'Full-Stack Software Engineer',
-        message: 'Mr. Truban assisted in the development and maintenance of a large-scale legacy application. Through an agile process Mr. Truban would meet with the client on a bi-weekly basis to determine requirements needed, and then proceed with feature development. '
+        message: 'At Nexxis Solutions, I actively contributed to the development and upkeep of a significant legacy application. Following an agile approach, I engaged in bi-weekly meetings with clients to discern their requirements, subsequently driving feature development to meet their evolving needs.'
     },
     IBM: {
         name: 'IBM',
         img: 'ibm',
         title: 'Federal Technical Associate - Application Developer',
-        message: 'Mr. Truban develops applications for IBM clients by translating system requirements into appropriate designs using Agile methods. He uses VS Code and Eclipse to develop web applications with JavaScript and leverages MVC patterns and ensures the client’s requirements are satisfied.'
+        message: 'At IBM, I played a pivotal role in application development, employing Agile methodologies to transform system requirements into robust designs. Using tools like VS Code and Eclipse, I crafted web applications in JavaScript, implementing MVC patterns to meticulously meet the specific needs of our clients.'
     },
     GridIron: {
         name: 'Grid Iron IT',
         img: 'Grid',
         title: 'Angular Developer',
-        message: 'Mr. Truban helped maintain the operation of a large-scale portal middleware application critical for clients’ operations. His tasks included adjusting the application to allow new applications connection to the clients database and other applications and improving the security and runtime of various features the portal utilized through leveraging the Angular framework, and Oracle SQL queries.'
+        message: 'I played a key role at Grid Iron IT, ensuring the seamless operation of a critical large-scale portal middleware application vital for client operations. My responsibilities encompassed facilitating the integration of new applications with client databases, enhancing security measures, and optimizing the runtime performance of various portal features. Leveraging the Angular framework and executing Oracle SQL queries, I contributed to the overall efficiency and functionality of the portal.'
     },
     Wegmans: {
         name: 'Wegmans',
@@ -36,38 +36,38 @@ export const PROJECTS = {
     NEXXIS: [{
         name: 'REDACTED',
         explanation: "Due to the level of clearance for this project an overview cannot be provided",
-        contribution: "Mr. Truban helped maintain, and develop new features for the client’s application utilizing a Vue Frontend Framework, and Spring Boot Backend. Through the use of an agile methodology, Mr. Truban would actively complete a variety of requirements determined every other week with the client, and demo said features to ensure the customers satisfaction. Mr. Truban also lead the revitalization of the JEST testing suites to remove substantial technical debt from the application, and rise the code coverage of the applications Front End from 78.2% to 94.6% helping increase the efficiency of other developers’ ability to properly create new features, and catch any potential errors through regression testing. In addition, Mr. Truban provided guidance and assistance in the applications Elastic Search capabilities to help further enhance the applications feature set."
+        contribution: "I played a pivotal role in maintaining and enhancing the client's application, utilizing the Vue Frontend Framework and Spring Boot Backend. Following an agile methodology, I actively addressed bi-weekly client requirements, ensuring customer satisfaction by demoing newly developed features. As a leader, I revitalized JEST testing suites, reducing significant technical debt and elevating the Front End code coverage from 78.2% to 94.6%. This not only increased development efficiency for creating new features but also facilitated error detection through comprehensive regression testing. Additionally, I provided guidance and assistance in optimizing the application's Elastic Search capabilities, contributing to the overall enhancement of its feature set."
     }],
     IBM: [{
         name: 'COMPS',
         explanation: "To develop an online management application for the Department of Education to help manage grants issued to various charter schools across the country.The front end was developed using an Angular framework, which was tested using Jasmine. The back end was developed utilizing C#/.Net and connected to an SQL Database.",
-        contribution: " Mr. Truban helped develop front end components and associated back-end components. that met the client’s specific requirements and met on a monthly basis with the client to translate their requirements to stories used in an AGILE environment, as well as demonstrate the current progress of the application. Mr. Truban also helped on-board new members of the team and made time to assist when needed."
+        contribution: " I actively contributed to the development of both front-end and associated back-end components that precisely aligned with the client's requirements. In a monthly meeting, I collaborated with the client to translate their needs into user stories within an AGILE environment, ensuring a seamless understanding of project objectives. Furthermore, I regularly demonstrated the ongoing progress of the application. Beyond my primary responsibilities, I played a role in onboarding new team members and consistently made myself available to provide assistance as needed."
     },
     {
         name: 'Innovation Garage',
         explanation: "To develop collaboration and technical skills the team was assigned the task of creating a web-based quiz application that would support multiple teams and run on the participant’s individual devices.The UX was developed using React, and the backend was developed using relational databases and leveraged the Spring Boot framework to create micro services. Docker containers were used for application deployment.",
-        contribution: "Mr. Truban helped develop front end components that utilized pre-existing spring microservices and react plug-ins to provide an intuitive UX.  He had also created a microservice in Spring Boot to allow his team to control and manipulate the data used in the project for their own component development. Mr. Truban led the application demonstration effort by developing the demo flow and script, arranging and facilitating practice sessions, providing constructive feedback to team members, all of which ultimately led to a successful presentation and demonstration."
+        contribution: "I contributed to the development of front-end components, integrating pre-existing Spring microservices and React plug-ins to deliver an intuitive user experience. Additionally, I designed a Spring Boot microservice to empower my team in controlling and manipulating project data for their component development. Taking a leadership role in application demonstrations, I orchestrated the demo flow and script, organized and facilitated practice sessions, and provided constructive feedback to team members. This comprehensive effort culminated in a successful presentation and demonstration."
     }],
     GRIDIRON: [{
         name: 'PORTAL',
         explanation: "To maintain and enhance a portal middleware application for the Department of Justice that allowed all of the DOJ’s respective audience to be able to smoothly access variety of applications to perform activities that was critical for the DOJ’s success. The front-end was developed using an Angular framework, which was tested using Jasmine. The backend was developed utilizing C#/.Net and connected to an Oracle SQL Database.",
-        contribution: "Mr. Truban helped develop front end components and associated back-end components. that met the client’s specific requirements and met on a monthly basis with the client to translate their requirements to stories used in an AGILE environment, as well as demonstrate the current progress of the application. Mr. Truban also helped on-board new members of the team and made time to assist when needed."
+        contribution: "I actively contributed to the development of front-end and associated back-end components, ensuring alignment with the client's specific requirements. Engaging in monthly meetings with the client, I translated their needs into user stories within an AGILE environment, while also presenting the current progress of the application. Beyond development, I played a key role in onboarding new team members and consistently made myself available to provide assistance as needed."
     }],
     SCHOOL: [
 {
     name: "FreeCol",
-    explanation: "FreeCol is a video open-source game that aims to clone the “Sid Meier's Colonization” game. The project and the effort’s main purpose was to develop Mr. Truban’s application testing skills.",
-    contribution: "Mr. Truban debugged various issues listed on FreeCol’s repository through effective refactoring with an aim at increasing cohesion and decreasing coupling. Mr. Truban also developed a new feature highlighting objects in the UX to be able to locate in-game resources more easily for color blind accessibility. After implementing the feature, Mr. Truban created a variety of tests using Google Code Pro.  Mr. Truban used Selenium tools to perform various tests including, mutation testing, component testing, and regression testing. The 90% passing test rate goal was met for the new feature."
+    explanation: "FreeCol is a video open-source game that aims to clone the “Sid Meier's Colonization” game. The project and the effort’s main purpose was to develop my application testing skills.",
+    contribution: "I systematically addressed and debugged multiple issues documented in FreeCol's repository, employing effective refactoring strategies to enhance cohesion and reduce coupling. Additionally, I introduced a new feature that emphasizes objects in the user experience (UX) to facilitate easier identification of in-game resources, with a particular focus on color-blind accessibility. Following the implementation, I meticulously crafted a diverse set of tests using Google Code Pro, utilizing Selenium tools to conduct mutation testing, component testing, and regression testing. Successfully meeting the 90% passing test rate goal, the new feature was validated and ensured robust functionality."
 },
 {
     name: "Healthy-Eating.com",
     explanation: "Web application to provide parents an interactive way to help educate their children on the benefits of eating healthy. The website aimed to keep a younger audience engaged, by providing various was to interact with the website while simultaneously giving information that the users would retain for their own benefit.",
-    contribution: "Mr. Truban utilized WebPress to create the website. Incorporating various existing plugins to play games, take donations via PayPal, and create users. Mr. Truban also learned JavaScript and used it to edit the plugins so that they would display information requested by the client."
+    contribution: "I employed WebPress as the platform to craft the website, seamlessly integrating diverse existing plugins for gaming, PayPal donation processing, and user management. Furthermore, I acquired proficiency in JavaScript, leveraging this knowledge to customize plugins and ensure they displayed client-requested information effectively."
 },
 {
     name: "Raspberry Pi Sensor Driver",
     explanation: "The project’s purpose was to develop device drivers for a distance and temperature sensor connected to a Raspberry Pi develop and to gain an understanding of how machines communicate with their given kernel, and how to interact in these environments.",
-    contribution: "Mr. Truban helped develop the initial code for the driver. He implemented pre-existing API’s and kept the project repository updated with the latest code. Mr. Truban quickly became proficient with Python so the team could leverage the adafruit_DHT API.  As a result of his leadership and technical skills, the team was able to showcase their driver in a live presentation."
+    contribution: "I played a key role in the development of the initial code for the driver, implementing pre-existing APIs and diligently maintaining the project repository with the latest code updates. Swiftly acquiring proficiency in Python, I facilitated the team's utilization of the adafruit_DHT API. Through my leadership and technical skills, the team successfully showcased our driver in a live presentation."
 },
     ]
 }
